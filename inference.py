@@ -150,6 +150,13 @@ if __name__ == '__main__':
         args.device = "mps"
     else:
         args.device = "cpu"
+    import time
 
+    start = time.time()
     main(args)
+    end = time.time()
+
+    final_time = end-start
+
+    print(f"TIME TAKEN TO GENERATE: {final_time}")
 
